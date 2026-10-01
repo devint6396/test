@@ -1,5 +1,5 @@
 modules = ["c-clang20"]
-run = "clang -std=c17 -Wall -Wextra -Wpedantic main.c -o /tmp/c-practice-calc && /tmp/c-practice-calc"
+run = "bash run-source.sh calc.c"
 
 [workflows]
 runButton = "Project"
@@ -22,4 +22,4 @@ outputType = "console"
 
 [[workflows.workflow.tasks]]
 task = "shell.exec"
-args = "clang -std=c17 -Wall -Wextra -Wpedantic calc.c -o /tmp/c-practice-calc && /tmp/c-practice-calc"
+args = "bash run-source.sh calc.c"
