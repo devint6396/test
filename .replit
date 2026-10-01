@@ -1,5 +1,5 @@
 modules = ["c-clang20"]
-run = "clang -std=c17 -Wall -Wextra -Wpedantic main.c -o main && ./main"
+run = "clang -std=c17 -Wall -Wextra -Wpedantic main.c -o /tmp/c-practice-calc && /tmp/c-practice-calc"
 
 [workflows]
 runButton = "Project"
@@ -17,9 +17,9 @@ args = "Run C program"
 name = "Run C program"
 author = "agent"
 
-[[workflows.workflow.tasks]]
-task = "shell.exec"
-args = "clang -std=c17 -Wall -Wextra -Wpedantic main.c -o main && ./main"
-
 [workflows.workflow.metadata]
 outputType = "console"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "clang -std=c17 -Wall -Wextra -Wpedantic calc.c -o /tmp/c-practice-calc && /tmp/c-practice-calc"
