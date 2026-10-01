@@ -1,0 +1,2 @@
+modules = ["c-clang20"]
+run = "clang -std=c17 -Wall -Wextra -Wpedantic main.c -o main && ./main"
