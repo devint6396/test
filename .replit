@@ -1,2 +1,25 @@
 modules = ["c-clang20"]
 run = "clang -std=c17 -Wall -Wextra -Wpedantic main.c -o main && ./main"
+
+[workflows]
+runButton = "Project"
+
+[[workflows.workflow]]
+name = "Project"
+mode = "parallel"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "Run C program"
+
+[[workflows.workflow]]
+name = "Run C program"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "clang -std=c17 -Wall -Wextra -Wpedantic main.c -o main && ./main"
+
+[workflows.workflow.metadata]
+outputType = "console"
