@@ -1,5 +1,5 @@
 modules = ["c-clang20"]
-run = "bash run-source.sh calc.c"
+run = "bash r.sh calc.c"
 
 [workflows]
 runButton = "Project"
@@ -22,4 +22,7 @@ outputType = "console"
 
 [[workflows.workflow.tasks]]
 task = "shell.exec"
-args = "bash run-source.sh calc.c"
+args = "bash r.sh calc.c"
+
+[nix]
+packages = ["lshw", "speedtest-cli"]
