@@ -25,4 +25,4 @@ task = "shell.exec"
 args = "bash r.sh calc.c"
 
 [nix]
-packages = ["lshw", "speedtest-cli"]
+packages = ["lshw", "speedtest-cli", "whois", "awscli", "screen"]

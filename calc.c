@@ -1,4 +1,10 @@
-// Calculator using switch statement.
+// Documentation
+/*
+File: calc.c
+Author: Nitin Kumar
+Description: Simple calculator in C using switch statement
+*/
+
 #include <stdio.h>
 
 int main() {

@@ -3,3 +3,5 @@ main
 a.out
 .ccls-cache
 *.out
+.agents
+.replit
