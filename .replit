@@ -1,4 +1,4 @@
-modules = ["c-clang20"]
+modules = ["c-clang20", "nodejs-20"]
 run = "bash r.sh calc.c"
 
 [workflows]
@@ -26,3 +26,6 @@ args = "bash r.sh calc.c"
 
 [nix]
 packages = ["lshw", "speedtest-cli", "whois", "awscli", "screen"]
+
+[objectStorage]
+defaultBucketID = "replit-objstore-eb8cc10e-7c66-43e0-ab27-bbeb9a9cf566"
